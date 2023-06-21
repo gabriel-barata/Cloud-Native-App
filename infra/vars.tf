@@ -1,6 +1,6 @@
 variable "project-name" {
 
-    default = "DevOps-learning-project"
+    default = "devops-learning-project"
     type = string
 
 }

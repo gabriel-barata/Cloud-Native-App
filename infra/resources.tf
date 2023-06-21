@@ -11,3 +11,15 @@ resource "aws_ecr_repository" "project-repo" {
     }
 
 }
+
+output "repo_URL" {
+
+    value = aws_ecr_repository.project-repo.repository_url
+  
+}
+
+output "repo_name" {
+
+    value = aws_ecr_repository.project-repo.name
+  
+}
