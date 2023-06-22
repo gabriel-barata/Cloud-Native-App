@@ -4,11 +4,12 @@ FROM python:3.9-slim-buster
 ## defining workdir and installing application dependencies
 WORKDIR /app
 COPY requirements.txt .
-RUN pip install --user --upgrade pip \
-    && pip install --user --no-cache-dir -r requirements.txt
+RUN pip3 install --user --upgrade pip \
+    && pip3 install --user --no-cache-dir -r requirements.txt
 
 ## copying /app folder to image, exposing ports and runing the app
 COPY . .
 ENV FLASK_RUN_HOST=0.0.0.0
 EXPOSE 5000
-CMD ["flask", "run"]
+ENTRYPOINT ["python3"]
+CMD ["app.py"]

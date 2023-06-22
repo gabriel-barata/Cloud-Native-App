@@ -20,6 +20,6 @@ output "repo_URL" {
 
 output "repo_name" {
 
-    value = aws_ecr_repository.project-repo.name
+    value = aws_ecr_repository.project-repo.id
   
 }

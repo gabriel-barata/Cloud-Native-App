@@ -1,3 +1,5 @@
 /venv
 /infra/.terraform
 /infra/.terraform.lock.hcl
+*.zip
+/aws
